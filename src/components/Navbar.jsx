@@ -1,0 +1,34 @@
+"use client"
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import React from 'react';
+
+const Navbar = () => {
+    const rounter = useRouter()
+    const handleLogin = () => {
+        rounter.push("/login")
+    }
+    const links = [
+        {
+            title: "Posts",
+            path: "/posts"
+        }
+    ]
+    return (
+        <div className=' p-4 bg-cyan-800 flex justify-between items-center'>
+            <h6 className=' text-cyan-100'>Data Next</h6>
+            <ul className=' flex justify-between items-center space-x-3 '>
+                {
+                    links.map((link, index) => (
+                        <li key={index}>
+                            <Link href={link.path} className='text-cyan-100 hover:text-white'>{link.title}</Link>
+                        </li>
+                    ))
+                }
+            </ul>
+            <button onClick={handleLogin}>Login</button>
+        </div>
+    );
+};
+
+export default Navbar;

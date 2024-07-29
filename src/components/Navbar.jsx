@@ -12,10 +12,14 @@ const Navbar = () => {
         {
             title: "Posts",
             path: "/posts"
+        },
+        {
+            title: "Meals",
+            path: "/meals"
         }
     ]
     return (
-        <div className=' p-4 bg-cyan-800 flex justify-between items-center'>
+        <div className=' p-4 bg-cyan-600 flex justify-between items-center'>
             <h6 className=' text-cyan-100'>Data Next</h6>
             <ul className=' flex justify-between items-center space-x-3 '>
                 {

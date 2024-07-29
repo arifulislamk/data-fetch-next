@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 const getData = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -15,6 +16,7 @@ const postpage = async () => {
           <div key={id} className=" border-2 border-cyan-950 p-5">
             <h3> Title: {title}</h3>
             <p> Description: {body}</p>
+            <button className=" bg-cyan-500 rounded-md px-4 py-2"><Link href={`posts/${id}`}> See Details</Link></button>
           </div>
         ))}
       </div>

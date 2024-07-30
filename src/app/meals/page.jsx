@@ -1,6 +1,12 @@
 import Meals from '@/components/Meals';
 import React from 'react';
-
+export const metadata = {
+    title: {
+        absolute: "Meals"
+    },
+    description: "sur powerful next app",
+    keywords: ['Meals', 'MEals-next-app']
+  };
 const mealpage = () => {
     return (
         <div className=' p-12'>

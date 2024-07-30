@@ -10,12 +10,20 @@ const Navbar = () => {
     }
     const links = [
         {
+            title: "Home",
+            path: "/"
+        },
+        {
             title: "Posts",
             path: "/posts"
         },
         {
             title: "Meals",
             path: "/meals"
+        },
+        {
+            title: "About",
+            path: "/about"
         }
     ]
     return (

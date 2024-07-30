@@ -5,6 +5,12 @@ const getData = async () => {
   const data = res.json();
   return data;
 };
+export const metadata = {
+  title: "Post",
+  description: "super powerful next app",
+  keywords: ['post', 'post-next-app']
+};
+
 const postpage = async () => {
   const posts = await getData();
   console.log(posts);

@@ -4,6 +4,15 @@ const getDetailsData = async(id)=> {
     const data = await res.json();
     return data;
 }
+
+export const generateMetadata = async ({params}) => {
+    const {title,body} = await getDetailsData(params.id)
+    return {
+        title: `${title}`,
+        description: body,
+        keywords: body.split(' ')
+    }
+}
 const detailspage = async({params}) => {
     const {title, body} = await getDetailsData(params.id)
 

@@ -9,7 +9,16 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
-  },
+  },redirects : async () => {
+    return [
+      {
+        source: "/us",
+        destination: "/gallery",
+        permanent: true,
+      },
+    ]
+  }
+
 };
 
 export default nextConfig;

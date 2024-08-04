@@ -13,7 +13,7 @@ export const metadata = {
 
 const postpage = async () => {
   const posts = await getData();
-  console.log(posts);
+  // console.log(posts);
   return (
     <div className="">
       <h2>All Posts</h2>

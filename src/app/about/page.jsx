@@ -8,17 +8,17 @@ export const metadata = {
     keywords: ['about', 'about-next-app']
   };
 
-  const getTime = async() => {
-    const res = await fetch("http://localhost:3000/time", {next: {revalidate: 5}})
-    const data = await res.json();
-    return data.currentTime
-  }
+  // const getTime = async() => {
+  //   const res = await fetch("http://localhost:3000/time", {next: {revalidate: 5}})
+  //   const data = await res.json();
+  //   return data.currentTime
+  // }
 const aboutpage = () => {
-    const currentTime =  getTime()
+    // const currentTime =  getTime()
     return (
         <div>
             <h2 className={`${headland.className} text-3xl text-center`} >About Page</h2>
-            <h3>Time: {currentTime}</h3>
+            {/* <h3>Time: {currentTime}</h3> */}
         </div>
     );
 };

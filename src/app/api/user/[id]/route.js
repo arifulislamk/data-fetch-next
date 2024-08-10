@@ -13,6 +13,13 @@ export async function PATCH (request, {params}){
         comment
     })
 }
+export async function DELETE (request, {params}){
+    const newcomment = comment.filter(c => c.id !== parseInt(params.id))
+    return Response.json({
+        message : 'coment deleted',
+        newcomment
+    })
+}
 
 const comment = [ 
     {
@@ -26,7 +33,7 @@ const comment = [
         body: "This is a sample comment"
     },
     {
-        id: 1,
+        id: 3,
         postId: 3,
         body: "This is a sample comment"
     },

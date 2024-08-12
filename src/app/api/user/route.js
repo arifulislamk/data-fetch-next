@@ -3,7 +3,7 @@ export async function GET (){
         comment
     }, {
         headers: {
-            "set-Cookie":"theme=night"
+            "set-Cookie":"mode=day",
         }
     })
 }

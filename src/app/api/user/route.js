@@ -3,7 +3,7 @@ export async function GET (){
         comment
     }, {
         headers: {
-            "set-Cookie":"mode=day",
+            "set-Cookie":"system=day",
         }
     })
 }
